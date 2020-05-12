@@ -1,6 +1,6 @@
 body{
    
-    background-image: url("https://i.gifer.com/1pX9.gif");
+    background-image: url("https://i.gifer.com/VJi.gif");
     background-size: 100% 100vh;
     position: relative;
    
@@ -8,7 +8,7 @@ body{
 }
 
 .blur{
-    background-color: rgba(0,0,0, 0.2);
+    background-color: rgba(21, 12, 99, 0.11);
     backdrop-filter: blur(5px);
     height: 100vh;
     width: 100%;
@@ -22,9 +22,9 @@ nav{
 
 .menu li{ 
     list-style: none;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Cuprum", sans-serif;
     margin: auto 40px;
-    font-size: 1.75em;
+    font-size: 1.5em;
 }
 
 .menu ul{
@@ -37,11 +37,12 @@ nav{
 a {
     color: lightgray;
     text-decoration: none;
+    transition: color 2s;
 }
 
 a:hover{
-    background-color: rgba(255, 251, 251, 0.9);
-    color:black;
+
+    color:rgba(0, 255, 255, 1);
     font-size:1.2em;
 }
 
@@ -51,11 +52,11 @@ a:hover{
     text-decoration: wavy;
     margin: 20px;
     text-align: center;
-    text-shadow: 3.5px 0 3px gray;
+    text-shadow: 2px 0 3px rgba(20, 166, 250, 0.637);
 }
 
 .site-title{
-    font-family: "Roboto Mono", monospace;
+    font-family: "Cuprum", sans-serif;
     font-weight: bolder;
    
 }
