@@ -46,7 +46,7 @@ header {
 
 .menu ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: center;
     margin:  20px auto;
 }
@@ -125,7 +125,6 @@ a:hover{
     margin-top: 15px;
     object-fit: cover;
     object-position: left bottom;
-    border-radius:60%;
 }
 
 figcaption {
@@ -163,11 +162,11 @@ figcaption {
 @media (min-width:1200px){
     .menu li, 
     .site-subtitle{
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .site-title{
-        font-size: 5em;
+        font-size: 4.5em;
     }
 
     .title-portfolio{
