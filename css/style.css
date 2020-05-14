@@ -79,18 +79,18 @@ a:hover{
     font-family: "Cuprum", sans-serif;
     font-weight: bolder;
     font-size: 7em;
-    animation: ease 1.7s animacaoTitulo;
-    animation-iteration-count: 1;  
+    animation: ease 3s  animacaoTitulo;  
 }
 
 @keyframes animacaoTitulo{
     from{
         transform: scale(0.8) skew(-3deg,4deg);
-        filter: opacity(0.2) blur(2px);
+        filter: opacity(0) blur(2px);
     }
+
     to{
         transform:skew(0deg, 0deg) rotateX(11deg);
-        filter: opacity(0.6) blur(1px);
+        filter: opacity(0.9) blur(1px);
     }
 }
 .site-subtitle{
@@ -120,10 +120,11 @@ a:hover{
 .portfolio{
     display:block;
     text-align: center;
-    color:whitesmoke;
-    min-height: 100vh;
-    
+    color:whitesmoke;    
+}
 
+.portfolio{
+    min-height: 80vh;
 }
 .contato h2,
 .title-portfolio{
@@ -156,12 +157,15 @@ figcaption {
     text-align: center;
     color:whitesmoke;
     min-height: 20vh;
+    margin-top: 20px;
 }
 
 .contato a{
     display:inline-block;
     text-align: bottom;
-    font-size: 3em;
+    font-size: 5em;
+    margin: 20px;
+    padding: 50px;
 }
 
 /* media query */
@@ -175,7 +179,9 @@ figcaption {
     .site-title{
         font-size: 4.5em;
     }
-
+    .portfolio{
+        min-height: 100vh;
+    }
     .title-portfolio{
         font-size: 3em;
     }
@@ -186,6 +192,12 @@ figcaption {
     .img-portfolio{
         width: 240px;
         margin-top: 25px;
+    }
+
+    .contato a{
+        font-size: 3.25em;
+        margin: 70px;
+        padding: 10px
     }
 
 }
