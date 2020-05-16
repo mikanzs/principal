@@ -40,15 +40,15 @@ header {
 .menu li{ 
     list-style: none;
     font-family: "Cuprum", sans-serif;
-    margin: auto 40px;
-    font-size: 5.5em;
+    margin: auto 20px;
+    font-size: 1em;
 }
 
 .menu ul{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    margin:  20px auto;
+    margin:  10px auto;
 }
 
 a {
@@ -78,7 +78,7 @@ a:hover{
 .site-title{
     font-family: "Cuprum", sans-serif;
     font-weight: bolder;
-    font-size: 7em;
+    font-size: 2.2em;
     animation: ease 3s  animacaoTitulo;  
 }
 
@@ -96,17 +96,16 @@ a:hover{
 .site-subtitle{
     font-family: "Barlow Semi Condensed", sans-serif;
     font-style: italic;
-    font-size: 4em;
+    font-size: 1.5em;
 }
 
-/*portfolio*/
 
-.background-portfolio{
+.background-geral{
     background-image: url(../img/background-3.gif);
     background-size: cover;
 }
 
-.background-portfolio .blur{
+.background-geral .blur{
   
     background-color: rgba(0, 8, 46, 0.678);
     backdrop-filter: blur(3px);
@@ -116,32 +115,71 @@ a:hover{
    
 }
 
+.sobre,
 .contato,
 .portfolio{
     display:block;
     text-align: center;
     color:whitesmoke;    
 }
+/*Sobre*/
+.sobre{
+    min-height:100vh;
+    
+}
+.sobre .avatar{
+    float: none;
+    max-width: 250px;
+    max-height: 250px;
+    clip-path: circle(40.4% at 46% 45%);
+}
+
+
+.sobre p{
+    text-indent: 1em;
+    text-align: justify;
+    margin-bottom: 1.5em;
+    font-family: "Cuprum", sans-serif;
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 1.3em;
+    max-width: 80%;
+    
+}
+
+.sobre a{
+    display:inline;
+    transform: none;
+    padding:0;
+}
+
+/*portfolio*/
 
 .portfolio{
     min-height: 80vh;
 }
+
+.sobre h2,
 .contato h2,
 .title-portfolio{
-    font-size: 3em;
+    font-size: 2em;
     font-family: "Barlow Semi Condensed", sans-serif;
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .portfolio .grid{
     display: grid;
-    justify-content: center;
+    justify-content: normal;
+    gap: 1.5em;
 }
+
 .img-portfolio{
-    width: 150px;
-    margin-top: 15px;
+    height: 180px;
+    width: 75%;
     object-fit: cover;
-    object-position: left bottom;
+    object-position: center;
+    
 }
 
 figcaption {
@@ -149,7 +187,43 @@ figcaption {
     padding-top: 20px;
     font-style: italic;
 }
+.flip-card{
+    height: 180px;
+    perspective: 1000px;
+}
+.flip-card:hover .card{
+    transform: rotateY(180deg);
+   
+}
 
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+        
+}
+.card-front,
+.card-back{
+    position: absolute;
+    backface-visibility: hidden;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.card-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 15, 78, 0.5);
+    height: 180px;
+    width: 100%;
+    border: 3px lighter #f1f1f1;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    transform: rotateY(180deg);
+    
+   
+}
 /*Contato*/
 
 .contato{
@@ -157,27 +231,50 @@ figcaption {
     text-align: center;
     color:whitesmoke;
     min-height: 20vh;
-    margin-top: 20px;
+    margin-top: 50px;
+    padding-top:auto;
 }
 
 .contato a{
     display:inline-block;
     text-align: bottom;
-    font-size: 5em;
-    margin: 20px;
-    padding: 50px;
+    font-size: 2.5em;
+    
+    padding: 14px;
 }
 
 /* media query */
 
 @media (min-width:600px){
+    .menu li{
+        margin: auto 40px;
+    }
+    .menu ul{
+        margin:20px auto;
+    }
     .menu li, 
     .site-subtitle{
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .site-title{
         font-size: 4.5em;
+    }
+    .sobre .avatar{
+        float: left;
+        max-width: 350px;
+        max-height: 350px;
+        margin-left :50px;
+    }
+    .sobre h2,
+    .portfolio h2,
+    .contato h2{
+        text-align: end;
+        margin-right: 40px;
+    }
+    .sobre p{
+        font-size: 1.5em;
+        text-align: right;
     }
     .portfolio{
         min-height: 100vh;
@@ -185,9 +282,12 @@ figcaption {
     .title-portfolio{
         font-size: 3em;
     }
-
+    .card-back{
+        top: 26px;
+    }
     .portfolio .grid{
         grid-template-columns: repeat(2, 250px);
+        justify-content: center;
     }
     .img-portfolio{
         width: 240px;
@@ -196,13 +296,14 @@ figcaption {
 
     .contato a{
         font-size: 3.25em;
-        margin: 70px;
+        margin-left: 40px;
         padding: 10px
     }
 
+
 }
 
-@media (min-width:1200px){
+@media (min-width:1024px){
     .menu li, 
     .site-subtitle{
         font-size: 1.8em;
@@ -212,11 +313,21 @@ figcaption {
         font-size: 4.5em;
     }
 
-    .title-portfolio{
-        font-size: 3em;
+   
+    .sobre .avatar{
+        max-width: 450px;
+        max-height: 450px;
     }
-   
-   
+    .sobre h2,
+    .portfolio h2,
+    .contato h2{
+        font-size: 2.5em;
+        text-align: end;
+        margin-right: 80px;
+    }
+    .card-back{
+        top: 40px;
+    }
     .portfolio .grid{
         grid-template-columns: repeat(3, 350px);
     }
@@ -224,15 +335,41 @@ figcaption {
         width: 300px;
         margin-top: 40px;
     }
+    .contato a{
+        font-size: 4em ;
+        margin-left: 70px;
+    }
+
+
 }
 
 @media (min-width:2560px){
-       
+    .menu li, 
+    .site-subtitle{
+        font-size: 2.5em;
+    }
+    .site-title{
+        font-size: 5em;
+    }   
     .portfolio .grid{
         grid-template-columns: repeat(3, 600px);
     }
     .img-portfolio{
         width: 550px;
+        height: auto;
         margin-top: 70px;
+    }
+    .sobre h2,
+    .portfolio h2,
+    .contato h2{
+        margin-right: 250px;
+    }
+    .sobre .avatar{
+        max-width: 600px;
+        max-height: 600px;
+        margin-left: 100px;
+    }
+    .sobre p{
+        font-size:2.2em;
     }
 }
